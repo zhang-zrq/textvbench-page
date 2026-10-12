@@ -1,0 +1,61 @@
+// Local visual inspection helper; Playwright is a development-only dependency.
+const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const fs = require('node:fs');
+(async () => {
+  fs.mkdirSync('.preview', {recursive: true});
+  const browser = await chromium.launch({headless: true, channel: process.env.PLAYWRIGHT_CHANNEL || undefined});
+  try {
+  const page = await browser.newPage({viewport: {width: 1440, height: 1050}, deviceScaleFactor: 1});
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  await page.goto(process.env.PAGE_URL || 'http://127.0.0.1:8080/', {waitUntil: 'networkidle'});
+  await page.screenshot({path: '.preview/desktop-top.png'});
+  await page.locator('#evaluation').scrollIntoViewIfNeeded();
+  const demo = page.frameLocator('#walkthrough-t2v iframe');
+  await demo.locator('[data-motion-root].motion-ready').waitFor();
+  await page.locator('#walkthrough-t2v').screenshot({path: '.preview/t2v-intro-desktop.png', animations: 'disabled'});
+  await demo.locator('[data-step-tab="1"]').click();
+  await page.locator('#walkthrough-t2v').screenshot({path: '.preview/define-targets-desktop.png', animations: 'disabled'});
+  await demo.locator('[data-step-tab="5"]').click();
+  await demo.locator('.frame-times [data-frame-select="2"]').click();
+  await page.locator('#walkthrough-t2v').screenshot({path: '.preview/t2v-follow-desktop.png', animations: 'disabled'});
+  await demo.locator('[data-step-tab="4"]').click();
+  await page.locator('#walkthrough-t2v').screenshot({path: '.preview/t2v-matching.png', animations: 'disabled'});
+  await page.locator('[data-track="ref2v"]').click();
+  const ref = page.frameLocator('#walkthrough-ref2v iframe');
+  await ref.locator('[data-motion-root].motion-ready').waitFor();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-intro-desktop.png', animations: 'disabled'});
+  await ref.locator('[data-step-tab="1"]').click();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-define-targets-desktop.png', animations: 'disabled'});
+  await ref.locator('[data-step-tab="5"]').click();
+  await ref.locator('.frame-times [data-frame-select="3"]').click();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-follow-desktop.png', animations: 'disabled'});
+  await ref.locator('[data-step-tab="4"]').click();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-matching.png', animations: 'disabled'});
+  await page.locator('[data-track="t2v"]').click();
+  await page.evaluate(() => scrollTo({top: 0, behavior: 'instant'}));
+  await page.screenshot({path: '.preview/desktop-full.png', fullPage: true, animations: 'disabled'});
+  await page.setViewportSize({width: 390, height: 844});
+  await page.goto(process.env.PAGE_URL || 'http://127.0.0.1:8080/', {waitUntil: 'networkidle'});
+  await page.screenshot({path: '.preview/mobile-top.png'});
+  await page.locator('#evaluation').scrollIntoViewIfNeeded();
+  await page.locator('[data-track="ref2v"]').click();
+  await ref.locator('[data-motion-root].motion-ready').waitFor();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-intro-mobile.png', animations: 'disabled'});
+  await ref.locator('[data-step-tab="1"]').click();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-define-targets-mobile.png', animations: 'disabled'});
+  await ref.locator('[data-step-tab="5"]').click();
+  await ref.locator('.frame-times [data-frame-select="3"]').click();
+  await page.locator('#walkthrough-ref2v').screenshot({path: '.preview/ref2v-follow-mobile.png', animations: 'disabled'});
+  await page.goto(new URL('assets/diagrams/evaluation-t2v.html', process.env.PAGE_URL || 'http://127.0.0.1:8080/').href);
+  await page.locator('[data-step-tab="1"]').click();
+  await page.screenshot({path: '.preview/define-targets-mobile.png', fullPage: true, animations: 'disabled'});
+  await page.locator('[data-step-tab="4"]').click();
+  await page.screenshot({path: '.preview/mobile-matching.png', fullPage: true, animations: 'disabled'});
+  console.log(JSON.stringify({errors, pageOverflow: await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), screenshots: '.preview/'}));
+  const checks = await require('./browser_checks.cjs')(browser, process.env.PAGE_URL || 'http://127.0.0.1:8080/');
+  console.log(JSON.stringify({passed: checks}, null, 2));
+  } finally {
+    await browser.close();
+  }
+})().catch(e => {console.error(e);process.exitCode = 1;});

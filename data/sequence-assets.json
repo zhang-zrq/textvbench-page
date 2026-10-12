@@ -1,0 +1,138 @@
+[
+  {
+    "track": "t2v",
+    "index": 0,
+    "timestamp": 0.0,
+    "output": "assets/images/sequences/t2v-follow-0.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "d9e697aacbf9e8fde5634eb59c7bdfeb03ba043d6f9c2b875b4ebddd5f12812f",
+    "source": "figures/t2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (0, 0, 768, 512)",
+    "first_target_state": "correct",
+    "second_target_state": "correct",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "t2v",
+    "index": 1,
+    "timestamp": 0.5,
+    "output": "assets/images/sequences/t2v-follow-1.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "2b175ea40f9e0518df204d3373b3983f9cf3f090be774789420d796cbea28d6d",
+    "source": "figures/t2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (768, 0, 768, 512)",
+    "first_target_state": "JU1CE",
+    "second_target_state": "correct",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "t2v",
+    "index": 2,
+    "timestamp": 1.0,
+    "output": "assets/images/sequences/t2v-follow-2.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "622201ba436bbac23d326984b6311cedf2e576dc98388ef95b58a8fcb5f2c3e8",
+    "source": "figures/t2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (0, 512, 768, 512)",
+    "first_target_state": "inactive",
+    "second_target_state": "correct",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "t2v",
+    "index": 3,
+    "timestamp": 1.5,
+    "output": "assets/images/sequences/t2v-follow-3.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "42e20a6d5cc995fab3e71092620f4cb02a18bff233a4cd55074459ffecb89730",
+    "source": "figures/t2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (768, 512, 768, 512)",
+    "first_target_state": "JU1CE",
+    "second_target_state": "missing",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "ref2v",
+    "index": 0,
+    "timestamp": 0.0,
+    "output": "assets/images/sequences/ref2v-follow-0.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "1480d18d13a1be86cf41f9ce7f80ebdc852d836191c97e9557302f03e419399c",
+    "source": "figures/ref2v-follow-first-frame.png",
+    "transform": "2x box downsample",
+    "first_target_state": "correct",
+    "second_target_state": "correct",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "ref2v",
+    "index": 1,
+    "timestamp": 0.5,
+    "output": "assets/images/sequences/ref2v-follow-1.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "dc94964fb06e68de77da7a7d0f1ea420c35c1dfa0f10bbdd1b1bb7fd0ecc456e",
+    "source": "figures/ref2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (768, 0, 768, 512)",
+    "first_target_state": "JU1CE",
+    "second_target_state": "correct",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "ref2v",
+    "index": 2,
+    "timestamp": 1.0,
+    "output": "assets/images/sequences/ref2v-follow-2.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "06846c7dc491c4f447bca643d1b3ad6d0c6e2a04c71eade731099cb6aabf2a14",
+    "source": "figures/ref2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (0, 512, 768, 512)",
+    "first_target_state": "inactive",
+    "second_target_state": "correct",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  },
+  {
+    "track": "ref2v",
+    "index": 3,
+    "timestamp": 1.5,
+    "output": "assets/images/sequences/ref2v-follow-3.webp",
+    "size": [
+      768,
+      512
+    ],
+    "mode": "RGB",
+    "sha256": "f5f899671c8e9b19b5320c982ce6e01b2f42c1efd96642343e8394565319bc4c",
+    "source": "figures/ref2v-follow-targets-sheet.png",
+    "transform": "Lossless quadrant crop (768, 512, 768, 512)",
+    "first_target_state": "JU1CE",
+    "second_target_state": "missing",
+    "extra_text": "Correct first-target string on the second carrier; remains unassigned."
+  }
+]

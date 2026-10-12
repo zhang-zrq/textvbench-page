@@ -1,0 +1,24 @@
+{
+  "title": "TextVBench: Evaluating Text Rendering and Preservation in Video Generation",
+  "authors": [
+    {"name": "Ruiqiang Zhang", "affiliations": [1], "equal": true},
+    {"name": "Hengyi Wang", "affiliations": [1], "equal": true},
+    {"name": "Chang Liu", "affiliations": [1]},
+    {"name": "Guanjie Wang", "affiliations": [1]},
+    {"name": "Zehua Ma", "affiliations": [1]},
+    {"name": "Weiming Zhang", "affiliations": [1]}
+  ],
+  "affiliations": ["Anhui Province Key Laboratory of Digital Security, University of Science and Technology of China"],
+  "links": {
+    "paper": "https://arxiv.org/abs/2610.13412",
+    "code": null,
+    "dataset": null
+  },
+  "video": {
+    "src": "assets/videos/TextVBench_full.mp4",
+    "poster": "assets/images/video-poster.webp",
+    "captions": null
+  },
+  "canonical_url": null,
+  "citation": "@misc{zhang2026textvbenchevaluatingtextrendering,\n  title={TextVBench: Evaluating Text Rendering and Preservation in Video Generation},\n  author={Ruiqiang Zhang and Hengyi Wang and Chang Liu and Guanjie Wang and Zehua Ma and Weiming Zhang},\n  year={2026},\n  eprint={2610.13412},\n  archivePrefix={arXiv},\n  primaryClass={cs.CV},\n  url={https://arxiv.org/abs/2610.13412}\n}"
+}

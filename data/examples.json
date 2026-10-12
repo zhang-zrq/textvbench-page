@@ -1,0 +1,109 @@
+{
+  "t2v": [
+    {
+      "title": "Two text targets. One shared carrier.",
+      "sample_id": "OPENVID_7e9a115b0717__easy",
+      "difficulty": "easy",
+      "carriers": [
+        {
+          "carrier_id": "C1",
+          "type": "wall writing",
+          "position": "on the background wall",
+          "slots": [
+            {
+              "slot_id": "T1"
+            },
+            {
+              "slot_id": "T2"
+            }
+          ]
+        }
+      ],
+      "texts": [
+        {
+          "slot_id": "T1",
+          "text_en": "Fresh Daily",
+          "text_zh": "每日新鲜"
+        },
+        {
+          "slot_id": "T2",
+          "text_en": "Bakery Corner",
+          "text_zh": "烘焙角落"
+        }
+      ],
+      "prompt_en": "A person is seen cutting a loaf of dark brown bread on a wooden cutting board. The bread is a type of whole grain or rye bread. The person is using a large knife to slice the bread, which is placed on the cutting board. The cutting board is placed on a table, and there is another loaf of bread in the background. The person appears to be in the process of slicing the bread, as there are already a few slices cut from the loaf. On the background wall, there is a wall writing that reads 'Fresh Daily' as a headline and 'Bakery Corner' as a subtitle. The overall style of the video is simple and straightforward, focusing on the act of cutting the bread.",
+      "prompt_zh": "视频中，一个人正在木质砧板上切一条深棕色的面包。面包是某种全麦或黑麦面包。这个人正在用一把大菜刀切面包，面包放在砧板上。砧板放在桌子上，背景中还有另一条面包。这个人似乎正在切面包，因为面包上已经切了几片。在背景墙上，有一面墙上的文字，标题写着“每日新鲜”，副标题写着“烘焙角落”。视频的整体风格简单明了，专注于切面包的动作。"
+    },
+    {
+      "title": "Keep the right words on the right surface.",
+      "sample_id": "OPENVID_a7e08d3acbec__medium",
+      "difficulty": "medium",
+      "carriers": [
+        {
+          "carrier_id": "C1",
+          "type": "windshield",
+          "position": "top of the frame",
+          "slots": [
+            {
+              "slot_id": "T1"
+            }
+          ]
+        },
+        {
+          "carrier_id": "C2",
+          "type": "center console screen",
+          "position": "between the steering wheel and passenger seat",
+          "slots": [
+            {
+              "slot_id": "T2"
+            }
+          ]
+        }
+      ],
+      "texts": [
+        {
+          "slot_id": "T1",
+          "text_en": "System Ready",
+          "text_zh": "系统就绪"
+        },
+        {
+          "slot_id": "T2",
+          "text_en": "Climate Control",
+          "text_zh": "空调控制"
+        }
+      ],
+      "prompt_en": "A close-up shot of a clean, well-lit car interior, focusing on a black steering wheel with a silver accent and a white leather passenger seat to its right. At the top of the frame, the windshield displays the persistent text 'System Ready'. Between the steering wheel and the passenger seat, the center console screen shows the persistent label 'Climate Control'. The camera remains steady, capturing the static, well-maintained environment without any people or other objects.",
+      "prompt_zh": "一个明亮整洁的汽车内部特写镜头，聚焦于带有银色装饰的黑色方向盘，以及其右侧的白色皮革乘客座椅。在画面顶部，挡风玻璃上持续显示文字“系统就绪”。在方向盘和乘客座椅之间，中控屏幕上持续显示标签“空调控制”。镜头保持静止，捕捉这个没有人物或其他物体的静态、保养良好的环境。"
+    }
+  ],
+  "ref2v": [
+    {
+      "title": "Preserve packaging, down to the small print.",
+      "sample_id": "0050",
+      "prompt": "A clean studio product showcase of the Safeguard laundry detergent box on a white background. The camera performs a slow, gentle push-in toward the front of the packaging, keeping the box centered and fully readable throughout. Soft, even lighting highlights the blue shield logo, lemon graphics, and all printed text and labels, which must remain exactly as shown with no changes. The motion is mild and stable, presenting the product as the clear main subject in a short commercial style.",
+      "reference_images": [
+        {
+          "ref_id": "R01",
+          "filename": "786232003064-1.jpg"
+        }
+      ],
+      "image": "assets/images/reference-0050.webp",
+      "width": 1276,
+      "height": 1276
+    },
+    {
+      "title": "Keep a document readable as the camera moves.",
+      "sample_id": "0150",
+      "prompt": "An aged, pencil-drawn floor plan of an old house rests flat on a plain wooden surface, framed in a nearly straight-on view so its hand-lettered title, interior room labels, entrance arrow, and scale bar stay crisp, stable, and fully unobstructed. A slow, restrained camera push-in drifts forward while soft natural light shifts gently across the textured paper and the sheet edge flutters almost imperceptibly. The entire drawing, layout, and every existing mark remain unchanged throughout this single continuous shot.",
+      "reference_images": [
+        {
+          "ref_id": "R01",
+          "filename": "scene-09-082.png"
+        }
+      ],
+      "image": "assets/images/reference-0150.webp",
+      "width": 1536,
+      "height": 1024
+    }
+  ]
+}

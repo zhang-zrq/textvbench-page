@@ -1,0 +1,122 @@
+{
+  "t2v": {
+    "track": "t2v",
+    "targets": [
+      "FRESH ORANGE JUICE",
+      "OPEN DAILY"
+    ],
+    "ids": [
+      "T1",
+      "T2"
+    ],
+    "carriers": [
+      "C1 storefront sign",
+      "C2 window poster"
+    ],
+    "wrong": "FRESH ORANGE JU1CE",
+    "sequences": [
+      [
+        "FRESH ORANGE JUICE",
+        "FRESH ORANGE JU1CE",
+        null,
+        "FRESH ORANGE JU1CE"
+      ],
+      [
+        "OPEN DAILY",
+        "OPEN DAILY",
+        "OPEN DAILY",
+        ""
+      ]
+    ],
+    "target_metrics": [
+      {
+        "spatial": 0.9583333333333334,
+        "temporal": 0.96875,
+        "length": 16
+      },
+      {
+        "spatial": 0.75,
+        "temporal": 0.6666666666666666,
+        "length": 9
+      }
+    ],
+    "metrics": {
+      "spatial_fidelity": 0.8833333333333334,
+      "temporal_fidelity": 0.86,
+      "textv_score": 87.151051625239,
+      "extra_text_ratio": 0.4801219512195122
+    },
+    "timestamps": [
+      0,
+      0.5,
+      1,
+      1.5
+    ],
+    "extra_per_frame": [
+      0.3902439024390244,
+      0.3902439024390244,
+      0.64,
+      0.5
+    ]
+  },
+  "ref2v": {
+    "track": "ref2v",
+    "targets": [
+      "ORANGE JUICE",
+      "ZERO SUGAR"
+    ],
+    "ids": [
+      "T0001",
+      "T0002"
+    ],
+    "carriers": [
+      "R01 carton",
+      "R02 can"
+    ],
+    "wrong": "ORANGE JU1CE",
+    "sequences": [
+      [
+        "ORANGE JUICE",
+        "ORANGE JU1CE",
+        null,
+        "ORANGE JU1CE"
+      ],
+      [
+        "ZERO SUGAR",
+        "ZERO SUGAR",
+        "ZERO SUGAR",
+        ""
+      ]
+    ],
+    "target_metrics": [
+      {
+        "spatial": 0.9393939393939394,
+        "temporal": 0.9545454545454546,
+        "length": 11
+      },
+      {
+        "spatial": 0.75,
+        "temporal": 0.6666666666666666,
+        "length": 9
+      }
+    ],
+    "metrics": {
+      "spatial_fidelity": 0.8446969696969697,
+      "temporal_fidelity": 0.8106060606060606,
+      "textv_score": 82.73004646002357,
+      "extra_text_ratio": 0.4399193548387097
+    },
+    "timestamps": [
+      0,
+      0.5,
+      1,
+      1.5
+    ],
+    "extra_per_frame": [
+      0.3548387096774194,
+      0.3548387096774194,
+      0.55,
+      0.5
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TextVBench evaluates visual text in generated videos through target-centric correspondence, spatial fidelity, and temporal fidelity.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="{{PAPER_TITLE}}">
+  <meta property="og:description" content="Two complementary benchmarks. One target-centric perspective on visual text.">
+  <meta property="og:type" content="website">
+{{CANONICAL}}
+  <title>{{PAPER_TITLE}}</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#" aria-label="TextVBench home"><span class="logo-mark" aria-hidden="true">T<span>V</span></span>TextVBench</a>
+      <nav aria-label="Main navigation"><a href="#benchmark">Benchmark</a><a href="#evaluation">Evaluation</a><a href="#results">Results</a><a href="#citation">Citation</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" aria-labelledby="paper-title">
+      <p class="eyebrow hero-eyebrow">Visual text in generated videos</p>
+      <h1 id="paper-title" aria-label="{{PAPER_TITLE}}"><span class="project-name">{{PROJECT_NAME}}</span><span class="paper-subtitle">{{PAPER_SUBTITLE}}</span></h1>
+      <p class="hero-description">The right text. In the right place. Across time.</p>
+      <div class="author-block">{{AUTHORS}}</div>
+      <div class="resource-links" aria-label="Project resources">{{RESOURCES}}</div>
+    </section>
+
+    <section class="video-section container" aria-labelledby="video-title">
+      {{VIDEO}}
+      <p class="media-caption">An introduction to TextVBench and the challenges of visual text in video generation.</p>
+    </section>
+
+    <section class="abstract-section" aria-labelledby="abstract-title">
+      <div class="reading-width">
+        <p class="eyebrow">The question behind the benchmark</p>
+        <h2 id="abstract-title">Convincing scenes.<br>But can you trust the text?</h2>
+        <p class="abstract-lead">A single character can change the meaning. A single frame can hide the failure.</p>
+        <details class="abstract-full" open><summary>Abstract</summary><p>{{ABSTRACT}}</p></details>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section container" aria-labelledby="benchmark-title">
+      <div class="section-heading"><p class="eyebrow"><span>01</span> The benchmark</p><h2 id="benchmark-title">Create it. Preserve it.</h2><p>Two complementary tasks probe the visual text a model is asked to create—and the text it is asked to keep.</p></div>
+      <div class="benchmark-stats" aria-label="Benchmark at a glance"><div><strong>300</strong><span>bilingual T2V prompts</span></div><div><strong>200</strong><span>Ref2V samples</span></div><div><strong>2</strong><span>complementary tracks</span></div><div><strong>S + T</strong><span>spatial & temporal fidelity</span></div></div>
+      <div class="track-overviews">
+        <article class="track-overview"><span class="track-label">TextVBench-T2V</span><h3>Text from a prompt.</h3><p>Create specified strings on their intended carriers and maintain them throughout a generated clip.</p><div class="mini-flow"><span>Prompt + text specification</span><b aria-hidden="true">→</b><span>Text creation</span></div><ul class="attribute-list"><li>English & Chinese</li><li>100 easy · 100 medium · 100 hard</li><li>Text, layout, carrier & motion</li></ul></article>
+        <article class="track-overview"><span class="track-label">TextVBench-Ref2V</span><h3>Text from a reference.</h3><p>Preserve the visual-text identities in reference images as the camera, viewpoint, or carrier changes.</p><div class="mini-flow"><span>Reference image + instruction</span><b aria-hidden="true">→</b><span>Text preservation</span></div><ul class="attribute-list"><li>Runtime reference OCR</li><li>Four sources · 50 samples each</li><li>Text density, structure & visibility</li></ul></article>
+      </div>
+
+      <div class="subsection-heading"><h3>Built for controlled difficulty.</h3><p>Construction attributes become diagnostic slices, connecting aggregate scores to specific capability limits.</p></div>
+      <figure class="paper-figure wide-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the T2V construction pipeline"><img src="assets/images/t2v-construction.webp" width="2400" height="1035" loading="lazy" alt="Seven stages create controlled bilingual T2V specifications: eligibility filtering, scene and carrier analysis, coverage sampling, carrier-slot planning, text instantiation, prompt composition, and quality control."><span class="zoom-hint">Expand figure ↗</span></button><figcaption><b>T2V construction.</b> Bind text slots to carriers before instantiating bilingual prompts. Scene images in this paper figure are synthetic illustrations.</figcaption></figure>
+      <div class="construction-split"><div><span class="track-label">Reference-conditioned construction</span><h3>A structured space of<br>preservation challenges.</h3><p>Ref2V combines text complexity, spatial structure, carrier identity, motion, and visibility. Sources cover app screens, paper/media, product packaging, and synthetic applications.</p><p class="small-note">The released subset contains 200 reference images. The evaluator also supports multiple references with explicit activation.</p></div><figure class="paper-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the Ref2V construction figure"><img src="assets/images/ref2v-construction.webp" width="1500" height="994" loading="lazy" alt="Ref2V construction combines text density, spatial layout, carrier type, and motion into preservation difficulty."><span class="zoom-hint">Expand figure ↗</span></button><figcaption>Attribute combinations illustrated in the paper.</figcaption></figure></div>
+
+      <div class="subsection-heading"><h3>What goes into the benchmark?</h3><p>Selected released inputs. Prompts drive generation; structured targets and reference OCR support evaluation.</p></div>
+      <div class="sample-group-heading"><span class="track-label">T2V inputs</span><span>Prompt-specified targets</span></div>
+      <div class="sample-grid">{{T2V_SAMPLES}}</div>
+      <div class="sample-group-heading"><span class="track-label">Ref2V inputs</span><span>Reference text preservation</span></div>
+      <div class="sample-grid">{{REF2V_SAMPLES}}</div>
+    </section>
+
+    <section id="evaluation" class="section evaluation-section" aria-labelledby="evaluation-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow"><span>02</span> Inside the evaluator</p><h2 id="evaluation-title">Understand the correspondence.<br>Then measure the text.</h2><p>Follow one example from intended text to observed evidence. See what each step consumes, what it produces, and why it matters.</p></div>
+        <div class="walkthrough-header"><div class="track-tabs" role="group" aria-label="Evaluation walkthrough track"><button type="button" data-track="t2v" aria-pressed="true" aria-controls="walkthrough-t2v">T2V <span>Creation</span></button><button type="button" data-track="ref2v" aria-pressed="false" aria-controls="walkthrough-ref2v">Ref2V <span>Preservation</span></button></div><span class="illustrative-label">Illustrative walkthrough</span></div>
+        <div class="walkthrough-wrap" id="walkthrough-t2v"><iframe title="T2V: six steps of target-centric correspondence" src="{{WALKTHROUGH_T2V}}" loading="lazy" class="walkthrough-frame" data-walkthrough></iframe></div>
+        <div class="walkthrough-wrap" id="walkthrough-ref2v"><iframe title="Ref2V: six steps of reference-grounded correspondence" src="{{WALKTHROUGH_REF2V}}" loading="lazy" class="walkthrough-frame" data-walkthrough></iframe></div>
+        <noscript><p class="small-note">Both complete walkthroughs are shown below one another. You can also <a href="assets/diagrams/evaluation-t2v.html">open T2V</a> or <a href="assets/diagrams/evaluation-ref2v.html">open Ref2V</a> separately.</p></noscript>
+        <div class="method-takeaway"><span aria-hidden="true">↳</span><p><strong>Correct correspondence does not imply correct text.</strong> The evaluator selects existing OCR evidence, including misspellings. It never rewrites that evidence to match the target.</p></div>
+        <details class="method-details"><summary>The shared evaluator, at a glance <span aria-hidden="true">+</span></summary><figure class="paper-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the shared evaluator overview"><img src="assets/images/evaluation-overview.webp" width="2400" height="1638" loading="lazy" alt="Shared evaluator: OCR observations, target-conditioned correspondence, spatial fidelity, temporal fidelity and video-level aggregation. T2V and Ref2V differ in target source and activation."><span class="zoom-hint">Expand figure ↗</span></button><figcaption>Paper overview. Trajectories, scenes, and numerical examples in the figure are illustrative.</figcaption></figure></details>
+        <details class="method-details"><summary>Metric definitions & evaluation protocol <span aria-hidden="true">+</span></summary><div class="metric-explainer"><div><h3>Spatial fidelity</h3><p>Normalized character edit similarity between a target and its matched OCR text, averaged over active observations. Whitespace and punctuation are removed; case is preserved.</p></div><div><h3>Temporal fidelity</h3><p>Text consistency between adjacent active observations of the same target. A missing match contributes zero; an inactive carrier/reference is excluded according to the track’s activation rule.</p></div><div><h3>TextVScore</h3><p class="formula">100 × 2ST / (S + T)</p><p>Targets are weighted by normalized text length. Ref2V then averages references equally. If S or T is zero, the score is zero.</p></div><div><h3>Separate diagnostics</h3><p>Extra measures unassigned readable text. Ref2V also reports reading-order preservation. Neither is folded into TextVScore.</p></div></div><p class="protocol-note">Paper protocol: 3 fps, at most 30 sampled frames, deterministic jitter, OCR confidence ≥ 0.80, at most 20 active candidates per frame, and target batches of at most three. T2V uses a 0.95 fast-match threshold. A single valid observation uses its spatial score as temporal fidelity; never-observed targets receive zero.</p></details>
+      </div>
+    </section>
+
+    <section id="results" class="section container" aria-labelledby="results-title">
+      <div class="section-heading"><p class="eyebrow"><span>03</span> Results & findings</p><h2 id="results-title">A different lens on video generation.</h2><p>The results below summarize evaluations of open-source models as of <strong><time datetime="2026-10-01">October 1, 2026</time></strong>. Each model uses the same 300 T2V prompts or 200 Ref2V samples.</p></div>
+      <div class="results-tables">{{RESULTS}}</div>
+      <p class="table-note">Arithmetic means over videos. Spatial / Temporal / Extra: 0–1; TextVScore: 0–100. ↑ higher is better; ↓ lower is better. <b>Bold</b> marks the best value per track and metric. All 2,100 T2V and 1,000 Ref2V evaluations in this snapshot completed successfully. Kandinsky-5 Pro is excluded because completed results are unavailable.</p>
+      <div class="findings"><article><span class="finding-index">01 / Creation</span><h3>68.32</h3><p><strong>MiniMax-H3 leads the completed T2V comparison.</strong> It has the strongest spatial and temporal fidelity and the lowest extra-text ratio.</p></article><article><span class="finding-index">02 / Preservation</span><h3>0.119</h3><p><strong>Points separate the top three Ref2V scores.</strong> These small gaps do not establish a reliable ordering; component-level diagnostics add context.</p></article><article><span class="finding-index">03 / Complexity</span><h3>77.34 → 35.06</h3><p><strong>More reference targets, lower fidelity.</strong> Pooled Ref2V scores fall from the few-target to many-target band. These descriptive slices are not controlled causal interventions.</p></article></div>
+      <details class="method-details"><summary>Explore the difficulty breakdown <span aria-hidden="true">+</span></summary><figure class="paper-figure scaling-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the difficulty analysis"><img src="assets/images/scaling-analysis.webp" width="1400" height="1750" loading="lazy" alt="Model-wise TextVScore heatmaps across T2V difficulty and Ref2V reference target load, with pooled results and first-to-last band changes."><span class="zoom-hint">Expand figure ↗</span></button><figcaption>Difficulty slices expose different robustness profiles. Ref2V target count co-varies with source, layout, and text length.</figcaption></figure></details>
+    </section>
+
+    <section id="citation" class="citation-section" aria-labelledby="citation-title"><div class="container"><div class="citation-heading"><div><p class="eyebrow">Build on this work</p><h2 id="citation-title">Citation</h2></div><button class="copy-button" type="button" data-copy-citation>Copy BibTeX</button></div><p class="small-note">{{CITATION_NOTE}}</p><pre id="bibtex"><code>{{CITATION}}</code></pre><p class="copy-status" role="status" aria-live="polite"></p></div></section>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="#"><span class="logo-mark" aria-hidden="true">T<span>V</span></span>TextVBench</a><p>Evaluating the words within the world.</p><a href="#main">Back to top ↑</a></footer>
+  <dialog class="image-dialog" aria-labelledby="image-dialog-title"><div class="dialog-toolbar"><h2 id="image-dialog-title">Figure detail</h2><button type="button" data-close-dialog aria-label="Close enlarged figure">Close ×</button></div><img alt=""><p>Scroll to inspect the full figure. Press Escape to close.</p></dialog>
+</body>
+</html>

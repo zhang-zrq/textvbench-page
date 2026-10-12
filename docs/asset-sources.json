@@ -1,0 +1,62 @@
+[
+  {
+    "source": "paper/figures/t2v_construction_pipeline.pdf",
+    "output": "assets/images/t2v-construction.webp",
+    "sha256": "30ced71ec4c7ef8f67d81598bf19d3acd000c4bd6a50f02c24b4680ce1750a8a",
+    "note": "First page rendered at high resolution; original aspect ratio, no content changes."
+  },
+  {
+    "source": "paper/figures/fig5_ref2v_construction.pdf",
+    "output": "assets/images/ref2v-construction.webp",
+    "sha256": "ae0252af32ea793009be3c061ddc798047f115a81701443bb32e4ce41f8e3e58",
+    "note": "First page rendered at high resolution; original aspect ratio, no content changes."
+  },
+  {
+    "source": "paper/figures/fig2_textvbench_overview.pdf",
+    "output": "assets/images/evaluation-overview.webp",
+    "sha256": "47f860eb2f1a91cd56b82248f4e8e7df143f6435f0856d88c6a58483b189120d",
+    "note": "First page rendered at high resolution; original aspect ratio, no content changes."
+  },
+  {
+    "source": "paper/figures/fig3_scaling_analysis.pdf",
+    "output": "assets/images/scaling-analysis.webp",
+    "sha256": "d718a754a0e9a899249c14e51c3f4bae2aaf13a259014933a5bb8a1e45c832e9",
+    "note": "First page rendered at high resolution; original aspect ratio, no content changes."
+  },
+  {
+    "source": "dataset/Ref2V/imgs/786232003064-1.jpg",
+    "output": "assets/images/reference-0050.webp",
+    "sha256": "d2010b5cdc8f5b3ecbb5504b3599f23f45196bd5924c4a7fe31154569e0c9e8d",
+    "note": "Released reference input, converted to WebP quality 88 for faster page loading; visual content and dimensions retained."
+  },
+  {
+    "source": "dataset/Ref2V/imgs/scene-09-082.png",
+    "output": "assets/images/reference-0150.webp",
+    "sha256": "10bc7aa979fcc1f585f28a3dc10c3413aa237fbb943a1fb33b4f9ae8cd4d1985",
+    "note": "Released reference input, converted to WebP quality 88 for faster page loading; visual content and dimensions retained."
+  },
+  {
+    "source": "dataset/T2V/benchmark_300.jsonl",
+    "output": "data/examples.json",
+    "sha256": "69674fcd17f52a2e30aa0be04f10f451d750b96652936995fd726d9b76622c29",
+    "note": "Two selected input records. Prompts and labels are unchanged."
+  },
+  {
+    "source": "dataset/Ref2V/video_prompt_dataset.jsonl",
+    "output": "data/examples.json",
+    "sha256": "994903fb5818a240ce878a37df1954cd2e29daadeaee1008dac13841bdff8eeb",
+    "note": "Two selected reference input records, not generated model outputs."
+  },
+  {
+    "source": "metrics/computed_metrics.json",
+    "output": "data/results.json",
+    "sha256": "18b86317a22d85d75aed5ff3016c1d165ca9a705cf3a77b187ae47801525100e",
+    "note": "Full precision means; website tables display three decimals, matching the paper."
+  },
+  {
+    "source": "media/TextVBench_full.mp4",
+    "output": "assets/videos/TextVBench_full.mp4",
+    "sha256": "5dfcc3618e4e09f596dfccf5a132e12df8d6be9e07506f2d100c9877840e94c0",
+    "note": "User-supplied project promotional video, copied byte-for-byte for portable site packaging."
+  }
+]

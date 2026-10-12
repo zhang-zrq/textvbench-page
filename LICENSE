@@ -19,9 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-Scope: this license applies to the original website source code, build scripts,
-styles, templates, and tests. Paper text and figures, benchmark data and
-reference images, promotional video, and generated illustrations are not
-covered by this code license. See THIRD_PARTY_NOTICES.md and
-docs/asset-sources.md for their provenance and reuse limitations.

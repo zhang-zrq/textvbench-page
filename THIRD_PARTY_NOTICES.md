@@ -5,9 +5,8 @@
 The MIT license in `LICENSE` applies to the original website code, build
 scripts, styles, templates, and tests. It does not relicense paper text or
 figures, benchmark records or reference imagery, the promotional video, or
-generated illustrations. Their provenance is recorded in
-`docs/asset-sources.md`, `docs/asset-sources.json`, and
-`docs/generated-assets.json`; provenance alone is not a redistribution license.
+generated illustrations. Source references for imported media are recorded in
+`docs/asset-sources.json`; provenance alone is not a redistribution license.
 
 The two benchmark reference images include product packaging and an
 illustrative floor plan. Copyrights and trademarks in depicted third-party

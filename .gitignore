@@ -33,3 +33,11 @@ secrets.*
 
 # Generated intermediate frames (the site serves WebP copies)
 assets/images/sequences/*.png
+
+# Internal documentation and production records
+[Rr][Ee][Aa][Dd][Mm][Ee]*
+docs/open-source-audit.md
+docs/validation.md
+docs/asset-sources.md
+docs/generated-assets.json
+docs/*prompt.txt

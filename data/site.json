@@ -11,7 +11,7 @@
   "affiliations": ["Anhui Province Key Laboratory of Digital Security, University of Science and Technology of China"],
   "links": {
     "paper": "https://arxiv.org/abs/2610.13412",
-    "code": null,
+    "code": "https://github.com/zhang-zrq/TextVBench",
     "dataset": null
   },
   "video": {

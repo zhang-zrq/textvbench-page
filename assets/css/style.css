@@ -177,7 +177,7 @@
 @media(max-width:720px){:root{scroll-padding-top:100px}
 .container,.reading-width{padding-inline:22px}
 .header-inner{padding:12px 20px;min-height:64px;gap:10px;flex-wrap:wrap}
-.site-header nav{gap:17px;font-size:13px}
+.site-header nav{gap:8px 17px;font-size:13px;flex-wrap:wrap}
 .wordmark{font-size:16px}
 .hero{padding-top:48px;padding-bottom:33px}
 .project-name{font-size:51px;letter-spacing:-2px;margin-bottom:17px}

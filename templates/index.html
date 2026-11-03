@@ -19,7 +19,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="#" aria-label="TextVBench home"><span class="logo-mark" aria-hidden="true">T<span>V</span></span>TextVBench</a>
-      <nav aria-label="Main navigation"><a href="#benchmark">Benchmark</a><a href="#evaluation">Evaluation</a><a href="#results">Results</a><a href="#citation">Citation</a></nav>
+      <nav aria-label="Main navigation"><a href="#benchmark">Benchmark</a><a href="#evaluation">Evaluation</a><a href="#results">Results</a><a href="#examples">Examples</a><a href="#citation">Citation</a></nav>
     </div>
   </header>
   <main id="main">
@@ -57,11 +57,6 @@
       <figure class="paper-figure wide-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the T2V construction pipeline"><img src="assets/images/t2v-construction.webp" width="2400" height="1035" loading="lazy" alt="Seven stages create controlled bilingual T2V specifications: eligibility filtering, scene and carrier analysis, coverage sampling, carrier-slot planning, text instantiation, prompt composition, and quality control."><span class="zoom-hint">Expand figure ↗</span></button><figcaption><b>T2V construction.</b> Bind text slots to carriers before instantiating bilingual prompts. Scene images in this paper figure are synthetic illustrations.</figcaption></figure>
       <div class="construction-split"><div><span class="track-label">Reference-conditioned construction</span><h3>A structured space of<br>preservation challenges.</h3><p>Ref2V combines text complexity, spatial structure, carrier identity, motion, and visibility. Sources cover app screens, paper/media, product packaging, and synthetic applications.</p><p class="small-note">The released subset contains 200 reference images. The evaluator also supports multiple references with explicit activation.</p></div><figure class="paper-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the Ref2V construction figure"><img src="assets/images/ref2v-construction.webp" width="1500" height="994" loading="lazy" alt="Ref2V construction combines text density, spatial layout, carrier type, and motion into preservation difficulty."><span class="zoom-hint">Expand figure ↗</span></button><figcaption>Attribute combinations illustrated in the paper.</figcaption></figure></div>
 
-      <div class="subsection-heading"><h3>What goes into the benchmark?</h3><p>Selected released inputs. Prompts drive generation; structured targets and reference OCR support evaluation.</p></div>
-      <div class="sample-group-heading"><span class="track-label">T2V inputs</span><span>Prompt-specified targets</span></div>
-      <div class="sample-grid">{{T2V_SAMPLES}}</div>
-      <div class="sample-group-heading"><span class="track-label">Ref2V inputs</span><span>Reference text preservation</span></div>
-      <div class="sample-grid">{{REF2V_SAMPLES}}</div>
     </section>
 
     <section id="evaluation" class="section evaluation-section" aria-labelledby="evaluation-title">
@@ -83,6 +78,14 @@
       <p class="table-note">Arithmetic means over videos. Spatial / Temporal / Extra: 0–1; TextVScore: 0–100. ↑ higher is better; ↓ lower is better. <b>Bold</b> marks the best value per track and metric. All 2,100 T2V and 1,000 Ref2V evaluations in this snapshot completed successfully. Kandinsky-5 Pro is excluded because completed results are unavailable.</p>
       <div class="findings"><article><span class="finding-index">01 / Creation</span><h3>68.32</h3><p><strong>MiniMax-H3 leads the completed T2V comparison.</strong> It has the strongest spatial and temporal fidelity and the lowest extra-text ratio.</p></article><article><span class="finding-index">02 / Preservation</span><h3>0.119</h3><p><strong>Points separate the top three Ref2V scores.</strong> These small gaps do not establish a reliable ordering; component-level diagnostics add context.</p></article><article><span class="finding-index">03 / Complexity</span><h3>77.34 → 35.06</h3><p><strong>More reference targets, lower fidelity.</strong> Pooled Ref2V scores fall from the few-target to many-target band. These descriptive slices are not controlled causal interventions.</p></article></div>
       <details class="method-details"><summary>Explore the difficulty breakdown <span aria-hidden="true">+</span></summary><figure class="paper-figure scaling-figure"><button class="figure-button" type="button" data-enlarge aria-label="Enlarge the difficulty analysis"><img src="assets/images/scaling-analysis.webp" width="1400" height="1750" loading="lazy" alt="Model-wise TextVScore heatmaps across T2V difficulty and Ref2V reference target load, with pooled results and first-to-last band changes."><span class="zoom-hint">Expand figure ↗</span></button><figcaption>Difficulty slices expose different robustness profiles. Ref2V target count co-varies with source, layout, and text length.</figcaption></figure></details>
+    </section>
+
+    <section id="examples" class="section container" aria-labelledby="examples-title">
+      <div class="section-heading"><p class="eyebrow"><span>04</span> Released inputs</p><h2 id="examples-title">Benchmark examples</h2><p>Selected released inputs. Prompts drive generation; structured targets and reference OCR support evaluation.</p></div>
+      <div class="sample-group-heading"><span class="track-label">T2V inputs</span><span>Prompt-specified targets</span></div>
+      <div class="sample-grid">{{T2V_SAMPLES}}</div>
+      <div class="sample-group-heading"><span class="track-label">Ref2V inputs</span><span>Reference text preservation</span></div>
+      <div class="sample-grid">{{REF2V_SAMPLES}}</div>
     </section>
 
     <section id="citation" class="citation-section" aria-labelledby="citation-title"><div class="container"><div class="citation-heading"><div><p class="eyebrow">Build on this work</p><h2 id="citation-title">Citation</h2></div><button class="copy-button" type="button" data-copy-citation>Copy BibTeX</button></div><p class="small-note">{{CITATION_NOTE}}</p><pre id="bibtex"><code>{{CITATION}}</code></pre><p class="copy-status" role="status" aria-live="polite"></p></div></section>

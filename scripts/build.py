@@ -25,14 +25,13 @@ def url(value):
 
 def icon(kind):
     paths = {'paper': '<path d="M5 3h9l5 5v13H5zM14 3v6h5M9 13h6M9 17h6"/>',
-             'code': '<path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/>',
-             'dataset': '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/>'}
+             'code': '<path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/>'}
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">{paths[kind]}</svg>'
 
 
 def render_resources(config):
     result = []
-    for key, title in [('paper', 'Paper'), ('code', 'Code'), ('dataset', 'Dataset')]:
+    for key, title in [('paper', 'Paper'), ('code', 'Code')]:
         link = url(config['links'].get(key))
         inner = icon(key) + title
         if link:
